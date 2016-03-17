@@ -37,7 +37,7 @@
     "install-tooling": "npm run link-plugin-client && npm run install-hooks && npm run install-starter && npm run install-simserver",
     "link-plugin-client": "cd lib/icv2-plugin-client && npm link && cd ../../ && npm link icv2-plugin-client",
     "install-hooks": "cd tooling/hooks && npm install",
-    "install-starter": "cd packaged-plugins/starter && ln -s ../../node_modules/ node_modules && npm install",
+    "install-starter": "cd packaged-plugins/starter && node makelink.js && npm install",
     "install-simserver": "cd tooling/simserver && npm install",
     "serve-app": "ionic serve -p 8105 -r 35735",
     "serve-starter": "cd packaged-plugins/starter && ionic serve -b -p 8110 -r 35740",
